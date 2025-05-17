@@ -139,7 +139,7 @@ async def get_promql_result(
     params = {"query": query}
     endpoint = "query_range"
     if start is not None:
-        if isinstance(str, datetime):
+        if isinstance(start, datetime):
             start = start.timestamp()
         params["start"] = start
 
